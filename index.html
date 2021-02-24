@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form validation exercise</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Form validation</h1>
+        <div class="container">
+            <form action="#" novalidate>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" minlength="5" required>
+                    <span class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <input id="country" type="text" pattern="[aA-zZ]+ñ?[aA-zZ]+" minlength="4" required>
+                    <span class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="zipcode">Zip code</label>
+                    <input id="zipcode" type="text" pattern="\d{4}" required>
+                    <span class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input id="password" type="password" minlength="6" required>
+                    <span class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password-confirm">Repeat password:</label>
+                    <input id="password-confirm" type="password" minlength="6" required>
+                    <span class="error"></span>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+            <p id="result"></p>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
